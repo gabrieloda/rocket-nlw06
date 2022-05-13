@@ -20,12 +20,14 @@ module.exports = {
 
       if (!isRoom) {
         /* Inseri a sala no banco */
+        console.log('xxx', roomId, pass)
+
         await db.run(`INSERT INTO rooms (
                     id,
                     pass
                 ) VAlUES (
                     ${parseInt(roomId)},
-                    ${pass}
+                    "${pass}"
                 )`)
       }
     }
